@@ -1,0 +1,21 @@
+{
+    "name": "pxkt-token",
+    "version": "0.0.1",
+    "description": "A set of smart-contracts for the Pocket Exchange Token system.",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "keywords": [
+        "ethereum",
+        "pokt",
+        "pxkt",
+        "pocket",
+        "decentralized",
+        "blockchain",
+        "decentralized-infractructure",
+        "infrastructure"
+    ],
+    "author": "Luis C. de Leon <luis@pokt.network>",
+    "license": "MIT"
+}
