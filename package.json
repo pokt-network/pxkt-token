@@ -17,5 +17,9 @@
         "infrastructure"
     ],
     "author": "Luis C. de Leon <luis@pokt.network>",
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "openzeppelin-solidity": "^2.1.2",
+        "zos-lib": "^2.1.0"
+    }
 }
