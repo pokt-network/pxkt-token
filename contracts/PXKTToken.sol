@@ -12,7 +12,9 @@ contract PXKTToken is StandaloneERC20, Ownable {
         string memory name, string memory symbol, uint8 decimals, uint256 initialSupply, address initialHolder,
         address[] memory minters, address[] memory pausers
     ) initializer public {
-        StandaloneERC20.initialize(name, symbol, decimals, initialSupply, initialHolder, minters, pausers);
+        uint256 totalSupply = initialSupply * (10 ** uint256(decimals));
+
+        StandaloneERC20.initialize(name, symbol, decimals, totalSupply, initialHolder, minters, pausers);
         Ownable.initialize(initialHolder);
     }
 }
