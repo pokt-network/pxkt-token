@@ -61,3 +61,6 @@ typings/
 .next
 
 .zos.session
+
+# Ignore dev environment for zos
+zos.dev-5777.json
