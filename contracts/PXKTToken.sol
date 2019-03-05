@@ -1,16 +1,18 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 
-import "zos-lib/contracts/Initializable.sol";
-import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
-import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
-import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "openzeppelin-eth/contracts/token/ERC20/StandaloneERC20.sol";
+import "openzeppelin-eth/contracts/ownership/Ownable.sol";
 
-contract PXKTToken is Initializable, ERC20, ERC20Detailed, Ownable {
+contract PXKTToken is StandaloneERC20, Ownable {
 
-    function initialize(uint256 _totalSupply, address _owner) initializer public {
-        ERC20Detailed("Pocket Exchange Token", "PXKT", 18)
-        ERC20()
-        this._totalSupply = _totalSupply
-        this._owner = _owner
+    /**
+     *  @dev Initializes the token, sets the initialHolder as also the owner of the Contract.
+     */
+    function initialize(
+        string memory name, string memory symbol, uint8 decimals, uint256 initialSupply, address initialHolder,
+        address[] memory minters, address[] memory pausers
+    ) initializer public {
+        StandaloneERC20.initialize(name, symbol, decimals, initialSupply, initialHolder, minters, pausers);
+        Ownable.initialize(initialHolder);
     }
 }
