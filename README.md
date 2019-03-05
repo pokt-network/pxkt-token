@@ -7,5 +7,5 @@ This ERC-20 token will serve as a pre-token for the POKT Token Swap when the Poc
 
 # Networks deployed
 
-1. Rinkeby Address: `TBA`
-2. Mainnet Address: `TBA`
+1. Rinkeby Address (Version 0.0.1): `0xf1a866aa96e97363c3e48d79862fa6210a29ce50`
+2. Mainnet Address (Version 0.0.1): `TBA`
