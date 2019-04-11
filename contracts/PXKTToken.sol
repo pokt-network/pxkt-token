@@ -17,4 +17,11 @@ contract PXKTToken is StandaloneERC20, Ownable {
         StandaloneERC20.initialize(name, symbol, decimals, totalSupply, initialHolder, minters, pausers);
         Ownable.initialize(initialHolder);
     }
+
+    /**
+     *  @dev Lets the owner designate a pauser for this contract
+     */
+    function addPauser(address pauser) public onlyOwner {
+        _addPauser(pauser);
+    }
 }
